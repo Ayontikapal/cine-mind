@@ -1,7 +1,9 @@
 import { Movie, MovieWatchProviders } from '@/types/movie';
 import { MOCK_MOVIES, MOCK_WATCH_PROVIDERS } from './mock-data';
+import { OMDBClient } from '../omdb/client';
 
 const TMDB_API_KEY = process.env.TMDB_API_KEY;
+const OMDB_API_KEY = process.env.OMDB_API_KEY;
 const BASE_URL = 'https://api.themoviedb.org/3';
 const IMAGE_BASE_URL = 'https://image.tmdb.org/t/p';
 
@@ -55,6 +57,9 @@ export class TMDBClient {
   }
 
   static async getTrending(): Promise<Movie[]> {
+    if (!TMDB_API_KEY && OMDB_API_KEY) {
+      return OMDBClient.searchMovies('Inception');
+    }
     if (!TMDB_API_KEY) {
       return MOCK_MOVIES;
     }
@@ -75,6 +80,11 @@ export class TMDBClient {
     // Check mock data first
     const mock = MOCK_MOVIES.find(m => m.id === id || m.tmdb_id === Number(tmdbId));
     if (mock) return mock;
+
+    if (typeof id === 'string' && id.startsWith('omdb_') && OMDB_API_KEY) {
+      const omdbMovie = await OMDBClient.getMovieByImdbId(id.replace('omdb_', ''));
+      if (omdbMovie) return omdbMovie;
+    }
 
     if (!TMDB_API_KEY) {
       return MOCK_MOVIES[0];
@@ -100,6 +110,10 @@ export class TMDBClient {
   static async searchMovies(query: string): Promise<Movie[]> {
     if (!query) return MOCK_MOVIES;
     
+    if (OMDB_API_KEY && !TMDB_API_KEY) {
+      return OMDBClient.searchMovies(query);
+    }
+
     if (!TMDB_API_KEY) {
       const q = query.toLowerCase();
       return MOCK_MOVIES.filter(m => 
