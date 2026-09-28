@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #0B0810;
+    --foreground: #F8F7FB;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom scrollbar styling for streaming carousels */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0B0810;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #21182B;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6D28D9;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Glassmorphism utilities */
+.glass-panel {
+  background: rgba(21, 16, 29, 0.75);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(167, 139, 250, 0.15);
+}
+
+.glass-card {
+  background: linear-gradient(135deg, rgba(33, 24, 43, 0.8) 0%, rgba(21, 16, 29, 0.9) 100%);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(41, 30, 56, 0.8);
+}
+
+/* Match percentage pill pulse animation */
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(167, 139, 250, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(230, 57, 70, 0.5);
+  }
+}
+
+.match-pill-glow {
+  animation: pulseGlow 3s infinite ease-in-out;
+}

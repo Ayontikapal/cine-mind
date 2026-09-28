@@ -1,0 +1,128 @@
+body {
+  width: 320px;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: #0B0810;
+  color: #F8F7FB;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #291E38;
+  padding-bottom: 12px;
+  margin-bottom: 14px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 18px;
+  color: #A78BFA;
+}
+
+.status-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(167, 139, 250, 0.15);
+  color: #A78BFA;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.status-badge.paused {
+  background: rgba(230, 57, 70, 0.15);
+  color: #E63946;
+}
+
+.status-badge .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #A78BFA;
+}
+
+.status-badge.paused .dot {
+  background: #E63946;
+}
+
+.user-info {
+  font-size: 12px;
+  color: #A8A1B5;
+  margin-bottom: 12px;
+}
+
+.card {
+  background: #15101D;
+  border: 1px solid #291E38;
+  border-radius: 10px;
+  padding: 12px;
+  margin-bottom: 14px;
+}
+
+.card h3 {
+  margin: 0 0 6px 0;
+  font-size: 13px;
+  color: #F8F7FB;
+}
+
+.desc {
+  font-size: 11px;
+  color: #A8A1B5;
+  margin: 0 0 12px 0;
+  line-height: 1.4;
+}
+
+.toggle-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.btn {
+  flex: 1;
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #6D28D9 0%, #9F1239 100%);
+  color: white;
+}
+
+.btn-secondary {
+  background: #21182B;
+  color: #F8F7FB;
+  border: 1px solid #291E38;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 12px;
+  font-size: 11px;
+}
+
+.footer a {
+  color: #A78BFA;
+  text-decoration: none;
+}

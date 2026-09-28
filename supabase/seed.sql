@@ -1,0 +1,117 @@
+-- Seed file for initial movies dataset in CineMind
+
+INSERT INTO public.movies (tmdb_id, title, description, release_date, poster_url, backdrop_url, genres, "cast", directors, runtime, rating, language)
+VALUES
+(
+  27205,
+  'Inception',
+  'Cobb, a skilled thief who steals corporate secrets through use of dream-sharing technology, is given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may doom the project and his team to disaster.',
+  '2010-07-16',
+  'https://images.unsplash.com/photo-1534447677768-be436bb09401?q=80&w=1000&auto=format&fit=crop',
+  'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=1600&auto=format&fit=crop',
+  ARRAY['Sci-Fi', 'Action', 'Thriller'],
+  '[{"name": "Leonardo DiCaprio", "character": "Dom Cobb"}, {"name": "Joseph Gordon-Levitt", "character": "Arthur"}, {"name": "Elliot Page", "character": "Ariadne"}]'::jsonb,
+  '[{"name": "Christopher Nolan"}]'::jsonb,
+  148,
+  8.4,
+  'en'
+),
+(
+  157336,
+  'Interstellar',
+  'The adventures of a group of explorers who make use of a newly discovered wormhole to surpass the limitations on human space travel and conquer the vast distances involved in an interstellar voyage.',
+  '2014-11-05',
+  'https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1000&auto=format&fit=crop',
+  'https://images.unsplash.com/photo-1506703719100-a0f3a48c0f86?q=80&w=1600&auto=format&fit=crop',
+  ARRAY['Sci-Fi', 'Drama', 'Adventure'],
+  '[{"name": "Matthew McConaughey", "character": "Cooper"}, {"name": "Anne Hathaway", "character": "Brand"}, {"name": "Jessica Chastain", "character": "Murph"}]'::jsonb,
+  '[{"name": "Christopher Nolan"}]'::jsonb,
+  169,
+  8.7,
+  'en'
+),
+(
+  329865,
+  'Arrival',
+  'Taking place after alien spacecrafts touch down across the globe, an elite team is put together to investigate, including language professor Louise Banks.',
+  '2016-11-11',
+  'https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?q=80&w=1000&auto=format&fit=crop',
+  'https://images.unsplash.com/photo-1447433589675-4aaa569f3e05?q=80&w=1600&auto=format&fit=crop',
+  ARRAY['Sci-Fi', 'Mystery', 'Drama'],
+  '[{"name": "Amy Adams", "character": "Louise Banks"}, {"name": "Jeremy Renner", "character": "Ian Donnelly"}]'::jsonb,
+  '[{"name": "Denis Villeneuve"}]'::jsonb,
+  116,
+  7.9,
+  'en'
+),
+(
+  335984,
+  'Blade Runner 2049',
+  'Thirty years after the events of the first film, a new blade runner, LAPD Officer K, unearths a long-buried secret that has the potential to plunge what remains of society into chaos.',
+  '2017-10-04',
+  'https://images.unsplash.com/photo-1509198397868-475647b2a1e5?q=80&w=1000&auto=format&fit=crop',
+  'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=1600&auto=format&fit=crop',
+  ARRAY['Sci-Fi', 'Mystery', 'Drama'],
+  '[{"name": "Ryan Gosling", "character": "K"}, {"name": "Harrison Ford", "character": "Rick Deckard"}, {"name": "Ana de Armas", "character": "Joi"}]'::jsonb,
+  '[{"name": "Denis Villeneuve"}]'::jsonb,
+  164,
+  8.0,
+  'en'
+),
+(
+  264660,
+  'Ex Machina',
+  'Caleb, a 26-year-old coder at the world''s largest internet company, wins a competition to spend a week at a private mountain retreat belonging to Nathan, the reclusive CEO of the company.',
+  '2014-12-16',
+  'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=1000&auto=format&fit=crop',
+  'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=1600&auto=format&fit=crop',
+  ARRAY['Sci-Fi', 'Thriller'],
+  '[{"name": "Domhnall Gleeson", "character": "Caleb"}, {"name": "Alicia Vikander", "character": "Ava"}, {"name": "Oscar Isaac", "character": "Nathan"}]'::jsonb,
+  '[{"name": "Alex Garland"}]'::jsonb,
+  108,
+  7.7,
+  'en'
+),
+(
+  438631,
+  'Dune',
+  'Paul Atreides, a brilliant and gifted young man born into a great destiny beyond his understanding, must travel to the most dangerous planet in the universe to ensure the future of his family and his people.',
+  '2021-09-15',
+  'https://images.unsplash.com/photo-1509198397868-475647b2a1e5?q=80&w=1000&auto=format&fit=crop',
+  'https://images.unsplash.com/photo-1534447677768-be436bb09401?q=80&w=1600&auto=format&fit=crop',
+  ARRAY['Sci-Fi', 'Adventure'],
+  '[{"name": "Timothée Chalamet", "character": "Paul Atreides"}, {"name": "Zendaya", "character": "Chani"}]'::jsonb,
+  '[{"name": "Denis Villeneuve"}]'::jsonb,
+  155,
+  8.0,
+  'en'
+),
+(
+  155,
+  'The Dark Knight',
+  'Batman raises the stakes in his war on crime. With the help of Lt. Jim Gordon and District Attorney Harvey Dent, Batman sets out to dismantle the remaining criminal organizations that plague the streets.',
+  '2008-07-16',
+  'https://images.unsplash.com/photo-1509198397868-475647b2a1e5?q=80&w=1000&auto=format&fit=crop',
+  'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=1600&auto=format&fit=crop',
+  ARRAY['Action', 'Crime', 'Drama', 'Thriller'],
+  '[{"name": "Christian Bale", "character": "Bruce Wayne / Batman"}, {"name": "Heath Ledger", "character": "Joker"}]'::jsonb,
+  '[{"name": "Christopher Nolan"}]'::jsonb,
+  152,
+  8.5,
+  'en'
+),
+(
+  693134,
+  'Dune: Part Two',
+  'Follow the mythic journey of Paul Atreides as he unites with Chani and the Fremen while on a path of revenge against the conspirators who destroyed his family.',
+  '2024-02-27',
+  'https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1000&auto=format&fit=crop',
+  'https://images.unsplash.com/photo-1506703719100-a0f3a48c0f86?q=80&w=1600&auto=format&fit=crop',
+  ARRAY['Sci-Fi', 'Adventure'],
+  '[{"name": "Timothée Chalamet", "character": "Paul Atreides"}, {"name": "Zendaya", "character": "Chani"}]'::jsonb,
+  '[{"name": "Denis Villeneuve"}]'::jsonb,
+  166,
+  8.3,
+  'en'
+)
+ON CONFLICT (tmdb_id) DO NOTHING;

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>CineMind Companion</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="header">
+    <div class="brand">
+      <span class="logo-icon">🎬</span>
+      <span class="logo-text">CineMind</span>
+    </div>
+    <div class="status-badge" id="statusBadge">
+      <span class="dot"></span> Active
+    </div>
+  </div>
+
+  <div class="body-content">
+    <div class="user-info" id="userInfo">
+      Logged in as <strong id="userEmail">Alex Cinephile</strong>
+    </div>
+
+    <div class="card">
+      <h3>Personalization Signals</h3>
+      <p class="desc">Only authorized movie pages and relevant searches are analyzed to improve your recommendations.</p>
+      
+      <div class="toggle-row">
+        <span>Movie Search Signals</span>
+        <input type="checkbox" id="toggleSearch" checked>
+      </div>
+
+      <div class="toggle-row">
+        <span>Browsing Signals</span>
+        <input type="checkbox" id="toggleBrowsing" checked>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button class="btn btn-secondary" id="pauseBtn">Pause Tracking</button>
+      <button class="btn btn-primary" id="openDashBtn">Open Dashboard</button>
+    </div>
+  </div>
+
+  <div class="footer">
+    <a href="#" id="privacyLink">Privacy Settings</a>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
